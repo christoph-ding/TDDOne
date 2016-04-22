@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "sinon": "^1.17.3"
   },
   "dependencies": {
     "mocha": "^2.4.5"
