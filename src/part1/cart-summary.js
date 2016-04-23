@@ -1,3 +1,5 @@
+var tax = require('./tax.js')
+
 function CartSummary(items) {
   this._items = items;
 };
@@ -10,6 +12,12 @@ CartSummary.prototype.getSubtotal = function () {
   }
 
   return 0;
-}
+};
 
-module.exports = CartSummary
+CartSummary.prototype.getTax = function (state, done) {
+  tax.calculate(this.getSubtotal(), state, function (taxInfo) {
+    done(taxInfo.amount);
+  })
+};
+
+module.exports = CartSummary;
