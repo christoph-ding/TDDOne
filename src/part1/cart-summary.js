@@ -13,8 +13,3 @@ CartSummary.prototype.getSubtotal = function () {
 }
 
 module.exports = CartSummary
-    
-
-    // return this._items.reduce(function(subtotal, item) {
-    //   return subtotal += (item.quantity * item.price);
-    // }, 0);

@@ -1,6 +1,7 @@
 var chai = require('chai');
 var expect = chai.expect;
 var CartSummary = require('./../../src/part1/cart-summary.js');
+var CartSummary = require('./../../src/part1/tax.js');
 
 describe('CartSummary', function() {
   it('getSubtotal() should return 0 if nothing was passed in', function() {
@@ -24,6 +25,19 @@ describe('CartSummary', function() {
     }]);
     expect(cartSummary.getSubtotal()).to.equal(300);
   })
+});
+
+describe('getTax()', function() {
+  beforeEach(function () {
+    sinon.stub(tax, 'calculate', function(subtotal, state, done) {
+      setTimeOut()
+
+
+    })
+  })
+
+
+
 
 
 });
